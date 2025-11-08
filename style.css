@@ -19,6 +19,26 @@
 
   /* Cheese colors */
   --cheese-yellow: #ffe359;
+
+  /* Theme colors */
+  --bg-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --bread-light: #d4b89d;
+  --bread-medium: #c8a17c;
+  --bread-medium-alt: #d3a883;
+  --bread-dark: #c4ad8b;
+  --bread-darker: #b48a67;
+  --bread-gradient-light: #c89b74;
+  --bread-gradient-dark: #ba8e68;
+  --lettuce-green: #67ac67;
+  --tomato-red: #df2929;
+  --tomato-dark: #ae2825;
+  --cheese-yellow: #dfc339;
+  --bg-color: #1a1a1a;
+  --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -29,6 +49,25 @@ body {
   justify-content: center;
   height: 100vh;
   width: 100%;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
 }
 .content {
   width: 300px;
